@@ -1,9 +1,15 @@
+body{
+  background-image:url('linky_smallsimg.jpg');
+}
 .container {
   margin: 20px auto;
   width: 800px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
+  background-color: white;
+  opacity: 0.8;
 }
+
 th {
   text-align: left;
 }
@@ -13,4 +19,21 @@ th {
 
 #main_title{
   text-align: center;
+  font-family: 'comic sans';
+  font-style: italic;
+  text-decoration: underline;
+}
+
+li{
+  list-style: none;
+  /*display: inline-block;*/
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  border: solid 2px black;
+  border-radius: 50px;
+}
+
+li a{
+  padding: 10px 30px;
 }

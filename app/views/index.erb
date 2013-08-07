@@ -3,15 +3,19 @@
 
   <h1 id="main_title"> Linky Smalls - Tales from the miniature hood</h1>
 
+  <% if params[:failed] %>
+    <div id="fail">
+    <%= erb :_invalid_url %>
+    </div>
+  <% end %>
+
   <form id="create_url" method="post" action="/urls" >
-    <input type="text" name="url" placeholder="Enter url to shorten">
+    <input type="text" name="url" placeholder="Enter earl to shorten">
     <input type="submit" value="Shorten!!">
   </form>
-
-
   <ul>
       <% @urls.each do |url| %>
-      <li><a href= <%= url.short_url %>> <%= url.short_url %></a> Visited: <%= url.click_count %></li>
+      <li><%= url.page_title %></pre><a href= <%= url.short_url %>> <%= url.short_url %></a> Visited: <%= url.click_count %></li>
       <% end %>
   </ul>
 
